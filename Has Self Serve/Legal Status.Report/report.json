@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"version\":\"5.34\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"creationSource\":\"QuickCreate\"}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"243L\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f755a73ea1e271417a33\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":159.39756904960453,\"z\":0,\"width\":1279.320748995527,\"height\":560.9966391226341}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"DIM_LEGAL_STATUS.Legal Status\"},{\"queryRef\":\"DIM_LEGAL_STATUS.Legal Status Start Date\"},{\"queryRef\":\"DIM_LEGAL_STATUS.Legal Status End Date\"},{\"queryRef\":\"DIM_TEAMS.Current Caseworker\"},{\"queryRef\":\"DIM_TEAMS.Current Department\"},{\"queryRef\":\"DIM_TEAMS.Most Recent Caseworker\"},{\"queryRef\":\"DIM_TEAMS.Most Recent Team\"},{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Person).Review Tray Team\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_LEGAL_STATUS\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0},{\"Name\":\"d2\",\"Entity\":\"DIM_TEAMS\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Person)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Legal Status\"},\"Name\":\"DIM_LEGAL_STATUS.Legal Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Current Department\"},\"Name\":\"DIM_TEAMS.Current Department\",\"NativeReferenceName\":\"Current Department\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Legal Status Start Date\"},\"Name\":\"DIM_LEGAL_STATUS.Legal Status Start Date\",\"NativeReferenceName\":\"Legal Status Start Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Legal Status End Date\"},\"Name\":\"DIM_LEGAL_STATUS.Legal Status End Date\",\"NativeReferenceName\":\"Legal Status End Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Current Caseworker\"},\"Name\":\"DIM_TEAMS.Current Caseworker\",\"NativeReferenceName\":\"Current Caseworker\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Most Recent Team\"},\"Name\":\"DIM_TEAMS.Most Recent Team\",\"NativeReferenceName\":\"Most Recent Team\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Most Recent Caseworker\"},\"Name\":\"DIM_TEAMS.Most Recent Caseworker\",\"NativeReferenceName\":\"Most Recent Caseworker\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Review Tray Team\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Person).Review Tray Team\",\"NativeReferenceName\":\"Review Tray Team\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Current Department\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"104.36333707104268D\"}}}},\"selector\":{\"metadata\":\"CountNonNull(DIM_PERSON.LLA ID)\"}}]}}}",
+          "filters": "[{\"name\":\"f30684c447cebb8dc616\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_LEGAL_STATUS\"}},\"Property\":\"Legal Status\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_LEGAL_STATUS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Legal Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'S117'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false},{\"name\":\"d662f5990cca09099109\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_LEGAL_STATUS\"}},\"Property\":\"Legal Status End Date\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_LEGAL_STATUS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Legal Status End Date\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{}},{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_PERSON\"}},\"Property\":\"LLA ID\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 561.00,
+          "width": 1279.32,
+          "x": 0.00,
+          "y": 159.40,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

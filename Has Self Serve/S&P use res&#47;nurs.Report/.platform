@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "S&P use res/nurs"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f0f39bd-6d8a-9b46-4ba0-714684e28e32"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Res Nurs Activity & Costs Test Version"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "901948b3-9fba-a46e-409b-5c3c0fc46e28"
+  }
+}

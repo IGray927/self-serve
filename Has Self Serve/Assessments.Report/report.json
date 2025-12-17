@@ -1,0 +1,630 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"version\":\"5.34\",\"type\":2}},\"activeSectionIndex\":5,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"creationSource\":\"QuickCreate\"}",
+  "layoutOptimization": 1,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"350L\"}}}}}]}}",
+      "displayName": "Where Conversation Took Place",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterb0cc00832c3ae3dd6f2e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment Completed Date\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"}},\"Right\":{\"DateSpan\":{\"Expression\":{\"Literal\":{\"Value\":\"datetime'2022-04-01T00:00:00'\"}},\"TimeUnit\":5}}}}}]},\"type\":\"Advanced\",\"howCreated\":1},{\"name\":\"Filterfb6c4eea2a5dbda8d8a0\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "72b891a698537e88cb56",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1d84cd5721af8e549c4f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":337.60225669957686,\"z\":2000,\"width\":1280,\"height\":162.4823695345557,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"Columns\":[{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\",\"active\":true}],\"Rows\":[{\"queryRef\":\"DIM_ASSESSMENT_ANSWERS_COLUMNS.Conversation took Place:\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_ASSESSMENT_ANSWERS_COLUMNS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\",\"NativeReferenceName\":\"MonthYR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Conversation took Place:\"},\"Name\":\"DIM_ASSESSMENT_ANSWERS_COLUMNS.Conversation took Place:\",\"NativeReferenceName\":\"Conversation took Place:\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{}}]}}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter0d10b4c0945094889016\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":true}]",
+          "height": 162.48,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 337.60,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"2bbd53043bc001cde21c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":978.5049365303244,\"y\":83.04654442877292,\"z\":0,\"width\":301.4950634696756,\"height\":79.43582510578278,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Assessment Rejection'\"}}],[{\"Literal\":{\"Value\":\"'Cancelled'\"}}],[{\"Literal\":{\"Value\":\"'Draft'\"}}]]}}}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.44,
+          "width": 301.50,
+          "x": 978.50,
+          "y": 83.05,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4a4cef5247a2c598771e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.608534197556,\"y\":0,\"z\":1000,\"width\":302.8235770710958,\"height\":82.96536358112215,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 82.97,
+          "width": 302.82,
+          "x": 977.61,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8065fa48d611b2ad286c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.08039492242595,\"y\":0,\"z\":5000,\"width\":198.58956276445696,\"height\":176.9252468265162,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of Assessments Completed'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 176.93,
+          "width": 198.59,
+          "x": 27.08,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a39a0ff6ba75c1f8ade6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":241.9181946403385,\"y\":0,\"z\":8000,\"width\":550.6346967559944,\"height\":176.9252468265162,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"NativeReferenceName\":\"Assessment Completed Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2024-12-15T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2024-12-16T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 176.93,
+          "width": 550.63,
+          "x": 241.92,
+          "y": 0.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"b45833d23a2fee27b81d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":792.5528913963328,\"y\":0,\"z\":7000,\"width\":169.70380818053596,\"height\":149.84485190409026,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.FACT FORM ID\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"},\"Name\":\"DIM_ASSESSMENTS.FACT FORM ID\",\"NativeReferenceName\":\"FACT FORM ID\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.84,
+          "width": 169.70,
+          "x": 792.55,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"c659f1107bfc62c656ee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":978.5049365303244,\"y\":245.52891396332862,\"z\":4000,\"width\":301.4950634696756,\"height\":75.82510578279266,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 75.83,
+          "width": 301.50,
+          "x": 978.50,
+          "y": 245.53,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"d290b1362728c34d4c6d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":6000,\"width\":27.08039492242595,\"height\":148.0394922425952,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 148.04,
+          "width": 27.08,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"f3822b9b0b2ea5c3c7cd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":530.7757404795486,\"z\":9000,\"width\":1280,\"height\":162.4823695345557,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"Columns\":[{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\",\"active\":true}],\"Rows\":[{\"queryRef\":\"DIM_ASSESSMENT_ANSWERS_COLUMNS.Conversation took Place:\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_ASSESSMENT_ANSWERS_COLUMNS\",\"Type\":0}],\"Select\":[{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5}},\"Scope\":[{\"RoleRef\":{\"Role\":\"Columns\"}}]}},\"Operator\":3},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"%CT Count of FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\",\"NativeReferenceName\":\"MonthYR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Conversation took Place:\"},\"Name\":\"DIM_ASSESSMENT_ANSWERS_COLUMNS.Conversation took Place:\",\"NativeReferenceName\":\"Conversation took Place:\"}]},\"columnProperties\":{\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\":{\"formatString\":\"0 %;-0 %;0 %\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{}}],\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Arial'\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Arial'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"rowHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Arial'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter0d10b4c0945094889016\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":true}]",
+          "height": 162.48,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 530.78,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"f4ba78398055670e3dcf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":978.5049365303244,\"y\":167.8984485190409,\"z\":3000,\"width\":301.4950634696756,\"height\":77.63046544428772,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 77.63,
+          "width": 301.50,
+          "x": 978.50,
+          "y": 167.90,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0b6adcf1af6285e7d464\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":546.8957617411226,\"z\":6000,\"width\":223.59679266895762,\"height\":173.01260022909509}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 173.01,
+          "width": 223.60,
+          "x": 0.00,
+          "y": 546.90,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"183b72c75fe4d347b35e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":175.94501718213058,\"y\":237.5257731958763,\"z\":3000,\"width\":445.7273768613975,\"height\":282.24513172966783}},{\"id\":1,\"position\":{\"x\":0,\"y\":160,\"width\":108,\"height\":120,\"z\":1}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 282.25,
+          "width": 445.73,
+          "x": 175.95,
+          "y": 237.53,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"2fa2cf96edbc3231acd2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":932.5085910652921,\"y\":425.20045819014894,\"z\":5000,\"width\":267.5830469644903,\"height\":294.70790378006876}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 294.71,
+          "width": 267.58,
+          "x": 932.51,
+          "y": 425.20,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"5921930f4600ccd90059\",\"layouts\":[{\"id\":0,\"position\":{\"x\":843.2476875642343,\"y\":78.27338129496403,\"z\":2000,\"width\":369.66084275436793,\"height\":149.96916752312436}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Completed'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 149.97,
+          "width": 369.66,
+          "x": 843.25,
+          "y": 78.27,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"8dce64a5e302465836d7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":223.7229437229437,\"y\":78.26839826839826,\"z\":1000,\"width\":205.021645021645,\"height\":88.65800865800865}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.FACT FORM ID\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"DIM_ASSESSMENTS.FACT FORM ID\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 88.66,
+          "width": 205.02,
+          "x": 223.72,
+          "y": 78.27,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8fa0a5d1a4ad6a5f8e35\",\"layouts\":[{\"id\":0,\"position\":{\"x\":953.0355097365407,\"y\":237.5257731958763,\"z\":4000,\"width\":326.96449026345937,\"height\":149.553264604811}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 149.55,
+          "width": 326.96,
+          "x": 953.04,
+          "y": 237.53,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"c4b6f74f47c8177ae6cb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":222.86368843069874,\"y\":519.7709049255441,\"z\":7000,\"width\":739.7021764032073,\"height\":200.13745704467354}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.DIM_PERSON_ID\"},{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Completed Date\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Worker completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"DIM_PERSON_ID\"},\"Name\":\"DIM_ASSESSMENTS.DIM_PERSON_ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Completed Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Worker completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Worker completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 200.14,
+          "width": 739.70,
+          "x": 222.86,
+          "y": 519.77,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"e5fb9e1f6f952390ac08\",\"layouts\":[{\"id\":0,\"position\":{\"x\":842.943722943723,\"y\":0,\"z\":0,\"width\":369.87012987012986,\"height\":123.29004329004329}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Quarter\"},{\"queryRef\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Day\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Dte\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Dte\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Dte\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Dte\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Day\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_459cbe50-6057-4406-a996-be382c07ae7a\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Quarter\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_459cbe50-6057-4406-a996-be382c07ae7a\"}},\"Property\":\"Quarter\"}}],\"isPinned\":true},{\"queryRefs\":[\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Month\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"DIM_DATE (Assessments).Dte.Variation.Date Hierarchy.Day\"],\"isCollapsed\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_459cbe50-6057-4406-a996-be382c07ae7a\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2022L\"}}]]}}}]}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_459cbe50-6057-4406-a996-be382c07ae7a\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2022L\"}}}}},\"displayName\":\"2022\"}]}}",
+          "filters": "[]",
+          "height": 123.29,
+          "width": 369.87,
+          "x": 842.94,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Referrals",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection1b162b0d49d1d8d7550c",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"83ed7ab630529201cc22\",\"layouts\":[{\"id\":0,\"position\":{\"x\":799.2395247029394,\"y\":44.427767354596625,\"width\":300.187617260788,\"height\":150.093808630394,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE (Referrals - Contact Date).MonthYR\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Referrals - Contact Date)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Referrals - Contact Date).MonthYR\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Referrals - Contact Date)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Apr-2022'\"}}],[{\"Literal\":{\"Value\":\"'May-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jun-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jul-2022'\"}}],[{\"Literal\":{\"Value\":\"'Aug-2022'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 150.09,
+          "width": 300.19,
+          "x": 799.24,
+          "y": 44.43,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"acf8ca28e5575d7402f7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":333.8086303939962,\"y\":44.427767354596625,\"width\":466.1913696060038,\"height\":150.093808630394,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_REFERRALS.First Team Name Grouped\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_REFERRALS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"First Team Name Grouped\"},\"Name\":\"DIM_REFERRALS.First Team Name Grouped\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 150.09,
+          "width": 466.19,
+          "x": 333.81,
+          "y": 44.43,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d283f4fda2af0870133a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":33.62101313320826,\"y\":44.427767354596625,\"z\":1000,\"width\":300.187617260788,\"height\":150.093808630394}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_REFERRALS.First Team Name Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_REFERRALS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"First Team Name Locality\"},\"Name\":\"DIM_REFERRALS.First Team Name Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_REFERRALS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"First Team Name Locality\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Hambleton & Richmondshire'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 150.09,
+          "width": 300.19,
+          "x": 33.62,
+          "y": 44.43,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fcfd9561594f0f2c9582\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.666666666666664,\"y\":285.3333333333333,\"z\":0,\"width\":765.3333333333334,\"height\":328}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"DIM_DATE (Referrals - Contact Date).MonthYR\",\"active\":true}],\"Values\":[{\"queryRef\":\"CountNonNull(DIM_REFERRALS.FACT_REFERRAL_ID)\"}],\"Rows\":[{\"queryRef\":\"DIM_REFERRALS.First Team Name Grouped\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Referrals - Contact Date)\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_REFERRALS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Referrals - Contact Date).MonthYR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"FACT_REFERRAL_ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_REFERRALS.FACT_REFERRAL_ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"First Team Name Grouped\"},\"Name\":\"DIM_REFERRALS.First Team Name Grouped\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"First Team Name Grouped\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter45896526098437794433\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_REFERRALS\"}},\"Property\":\"First Team Name Grouped\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_REFERRALS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"First Team Name Grouped\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Living Well Team - Hambleton and Richmondshire'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 328.00,
+          "width": 765.33,
+          "x": 34.67,
+          "y": 285.33,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Assessments1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection6d15aec4dfc5b2406a2f",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"165969ce8648ae1dd1d7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":153.87442572741196,\"z\":0,\"width\":627.2588055130169,\"height\":266.5849923430322}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"Rows\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\",\"active\":true}],\"Columns\":[{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter5d671785ba98aa7b46f7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Assessments)\"}},\"Property\":\"MonthYR\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Apr-2022'\"}}],[{\"Literal\":{\"Value\":\"'May-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jun-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jul-2022'\"}}],[{\"Literal\":{\"Value\":\"'Aug-2022'\"}}],[{\"Literal\":{\"Value\":\"'Sep-2022'\"}}],[{\"Literal\":{\"Value\":\"'Oct-2022'\"}}],[{\"Literal\":{\"Value\":\"'Nov-2022'\"}}],[{\"Literal\":{\"Value\":\"'Dec-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jan-2023'\"}}],[{\"Literal\":{\"Value\":\"'Feb-2023'\"}}],[{\"Literal\":{\"Value\":\"'Mar-2023'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 266.58,
+          "width": 627.26,
+          "x": 0.00,
+          "y": 153.87,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"190c831bab0035df7930\",\"layouts\":[{\"id\":0,\"position\":{\"x\":878.9493433395872,\"y\":50.431519699812384,\"z\":1000,\"width\":365.0281425891182,\"height\":247.35459662288932}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Completed'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 247.35,
+          "width": 365.03,
+          "x": 878.95,
+          "y": 50.43,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"3f8593d40ee566c5b772\",\"layouts\":[{\"id\":0,\"position\":{\"x\":543.9399624765479,\"y\":70.84427767354597,\"z\":2000,\"width\":196.92307692307693,\"height\":82.85178236397749}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 82.85,
+          "width": 196.92,
+          "x": 543.94,
+          "y": 70.84,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b6acc6cd9729453c67cc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":577.0009199632015,\"y\":385.05979760809566,\"z\":3000,\"width\":702.9990800367985,\"height\":304.9862005519779}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"},{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Worker completed by\"},{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"},{\"queryRef\":\"DIM_PERSON.Postcode\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\",\"NativeReferenceName\":\"Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Worker completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Worker completed by\",\"NativeReferenceName\":\"Assessment Worker completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"NativeReferenceName\":\"Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Postcode\"},\"Name\":\"DIM_PERSON.Postcode\",\"NativeReferenceName\":\"Postcode\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\",\"NativeReferenceName\":\"FACT FORM ID\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter5d671785ba98aa7b46f7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Assessments)\"}},\"Property\":\"MonthYR\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Apr-2022'\"}}],[{\"Literal\":{\"Value\":\"'May-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jun-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jul-2022'\"}}],[{\"Literal\":{\"Value\":\"'Aug-2022'\"}}],[{\"Literal\":{\"Value\":\"'Sep-2022'\"}}],[{\"Literal\":{\"Value\":\"'Oct-2022'\"}}],[{\"Literal\":{\"Value\":\"'Nov-2022'\"}}],[{\"Literal\":{\"Value\":\"'Dec-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jan-2023'\"}}],[{\"Literal\":{\"Value\":\"'Feb-2023'\"}}],[{\"Literal\":{\"Value\":\"'Mar-2023'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 304.99,
+          "width": 703.00,
+          "x": 577.00,
+          "y": 385.06,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"350L\"}}}}}]}}",
+      "displayName": "Carers Assessments Completed",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection8a7f6751dc1fbd3cf075",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0ea5f098bef53635f317\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.963543024445025,\"y\":18.070467443399444,\"z\":1000,\"width\":197.1323721098121,\"height\":82.95987326287926,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 82.96,
+          "width": 197.13,
+          "x": 13.96,
+          "y": 18.07,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"0f92e2a2b077fd011a90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":374.551507008643,\"y\":50.10447791124391,\"z\":3000,\"width\":438.61952794433194,\"height\":247.23685002105603,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Assessment Start Date Filter\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Assessment Start Date Filter Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Assessment Start Date Filter\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Assessment Start Date Filter Month\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Month\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2023L\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"2022L\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"2021L\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Year\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Month\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'April'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'May'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'June'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'July'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'August'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'September'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'October'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'November'\"}}],[{\"Literal\":{\"Value\":\"2021L\"}},{\"Literal\":{\"Value\":\"'December'\"}}],[{\"Literal\":{\"Value\":\"2022L\"}},{\"Literal\":{\"Value\":\"'January'\"}}],[{\"Literal\":{\"Value\":\"2022L\"}},{\"Literal\":{\"Value\":\"'February'\"}}],[{\"Literal\":{\"Value\":\"2022L\"}},{\"Literal\":{\"Value\":\"'March'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"filterExpressionMetadata\":{\"expressions\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Name\":\"Variation\",\"Property\":\"Assessment Start Date Filter\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Name\":\"Variation\",\"Property\":\"Assessment Start Date Filter\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"}}],\"cachedValueItems\":[{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'April'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"April\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'May'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"May\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'June'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"June\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'July'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"July\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'August'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"August\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'September'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"September\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'October'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"October\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'November'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"November\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'December'\"}}}}}],\"valueMap\":{\"0\":\"2021\",\"1\":\"December\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2022L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'January'\"}}}}}],\"valueMap\":{\"0\":\"2022\",\"1\":\"January\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2022L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'February'\"}}}}}],\"valueMap\":{\"0\":\"2022\",\"1\":\"February\"}},{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2022L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Month\"}},\"Right\":{\"Literal\":{\"Value\":\"'March'\"}}}}}],\"valueMap\":{\"0\":\"2022\",\"1\":\"March\"}}]}}}",
+          "filters": "[]",
+          "height": 247.24,
+          "width": 438.62,
+          "x": 374.55,
+          "y": 50.10,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"1515f7faf04b665d2a0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":887.9170593779454,\"y\":221.77391862353863,\"z\":5000,\"width\":364.6948884031524,\"height\":150.31343373373173,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment period\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Initial Assessment'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 150.31,
+          "width": 364.69,
+          "x": 887.92,
+          "y": 221.77,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"2f0465ea68888914e4aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":879.7032105400365,\"y\":132.24296629033228,\"width\":364.6948884031524,\"height\":165.09836164196764,\"z\":4000,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Conversation Record (Carer)'\"}}],[{\"Literal\":{\"Value\":\"'Conversation Record (Carer''s Assessment)'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 165.10,
+          "width": 364.69,
+          "x": 879.70,
+          "y": 132.24,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"5513f7982ac7062fb04b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.167761410962349,\"y\":100.46230818682393,\"z\":6000,\"width\":288.50714145959694,\"height\":197.06068144338542,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\",\"NativeReferenceName\":\"LLA ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 197.06,
+          "width": 288.51,
+          "x": 14.17,
+          "y": 100.46,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"c8dc53ffad03d507952f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":879.7032105400365,\"y\":28.74847093268093,\"z\":0,\"width\":364.6948884031524,\"height\":103.49449535765136,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Completed'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 103.49,
+          "width": 364.69,
+          "x": 879.70,
+          "y": 28.75,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d026af0523749fb89fe1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":382.57026852771537,\"z\":2000,\"width\":1280.468398766271,\"height\":304.05771341941556,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"},{\"queryRef\":\"DIM_PERSON.Birth Date\"},{\"queryRef\":\"Sum(DIM_PERSON.Current Age)\"},{\"queryRef\":\"DIM_ASSESSMENTS.Start date\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Completed Date\"},{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Worker completed by\"},{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"},{\"queryRef\":\"DIM_PERSON.Postcode\"},{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\"},{\"queryRef\":\"DIM_ASSESSMENTS.Outcome\"},{\"queryRef\":\"Sum(DIM_ASSESSMENTS.Days Assessment Open)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\",\"NativeReferenceName\":\"Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Worker completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Worker completed by\",\"NativeReferenceName\":\"Assessment Worker completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"NativeReferenceName\":\"Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Postcode\"},\"Name\":\"DIM_PERSON.Postcode\",\"NativeReferenceName\":\"Postcode\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\",\"NativeReferenceName\":\"FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Start date\"},\"Name\":\"DIM_ASSESSMENTS.Start date\",\"NativeReferenceName\":\"Start date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\",\"NativeReferenceName\":\"Form Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Completed Date\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"NativeReferenceName\":\"Assessment Completed Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Outcome\"},\"Name\":\"DIM_ASSESSMENTS.Outcome\",\"NativeReferenceName\":\"Outcome\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Days Assessment Open\"}},\"Function\":0},\"Name\":\"Sum(DIM_ASSESSMENTS.Days Assessment Open)\",\"NativeReferenceName\":\"Days Assessment Open\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Birth Date\"},\"Name\":\"DIM_PERSON.Birth Date\",\"NativeReferenceName\":\"Birth Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Current Age\"}},\"Function\":0},\"Name\":\"Sum(DIM_PERSON.Current Age)\",\"NativeReferenceName\":\"Current Age\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Outcome\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter0d10b4c0945094889016\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":true}]",
+          "height": 304.06,
+          "width": 1280.47,
+          "x": 0.00,
+          "y": 382.57,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "D2A",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectioncf195c4e0cba1640a52a",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1ed500d305bc86fb51ce\",\"layouts\":[{\"id\":0,\"position\":{\"x\":880,\"y\":188.36363636363637,\"z\":3000,\"width\":364.3636363636364,\"height\":94.54545454545455}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 94.55,
+          "width": 364.36,
+          "x": 880.00,
+          "y": 188.36,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"ad66a903cb96a5b8feca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":878.9493433395872,\"y\":50.431519699812384,\"z\":1000,\"width\":365.0281425891182,\"height\":247.35459662288932}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Completed'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 247.35,
+          "width": 365.03,
+          "x": 878.95,
+          "y": 50.43,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d376a0933c48b2b52aa8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":94.54545454545455,\"y\":524.3636363636364,\"z\":4000,\"width\":626.1818181818181,\"height\":179.63636363636363}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":1},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 179.64,
+          "width": 626.18,
+          "x": 94.55,
+          "y": 524.36,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"d4f884b295a8aaf29afb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":61.81818181818182,\"y\":262.54545454545456,\"z\":0,\"width\":626.1818181818181,\"height\":266.90909090909093}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"Rows\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\",\"active\":true}],\"Columns\":[{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\"}]},\"columnProperties\":{\"DIM_ASSESSMENTS.Assessment Dept. completed by\":{\"displayName\":\"Team\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter5d671785ba98aa7b46f7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Assessments)\"}},\"Property\":\"MonthYR\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Apr-2022'\"}}],[{\"Literal\":{\"Value\":\"'May-2022'\"}}],[{\"Literal\":{\"Value\":\"'Jun-2022'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 266.91,
+          "width": 626.18,
+          "x": 61.82,
+          "y": 262.55,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d763129a80a41bec9f24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":543.9399624765479,\"y\":70.84427767354597,\"z\":2000,\"width\":196.92307692307693,\"height\":82.85178236397749}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Hambleton & Richmondshire'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 82.85,
+          "width": 196.92,
+          "x": 543.94,
+          "y": 70.84,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"350L\"}}}}}]}}",
+      "displayName": "Assesments started",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiond22f03e550632ab8bd84",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"374b63d6e10ddfcbc991\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":155.84537552058583,\"z\":6000,\"width\":190.62078989294798,\"height\":119.78198283813623,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of Assessments Started'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 119.78,
+          "width": 190.62,
+          "x": 0.00,
+          "y": 155.85,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"58988cbc2f7d49794c90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.5755373564022,\"y\":155.84537552058583,\"z\":0,\"width\":302.67490287055927,\"height\":79.85465522542415,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Assessment Rejection'\"}}],[{\"Literal\":{\"Value\":\"'Cancelled'\"}}],[{\"Literal\":{\"Value\":\"'Completed'\"}}],[{\"Literal\":{\"Value\":\"'Copy Forward'\"}}],[{\"Literal\":{\"Value\":\"'Assessment Approved'\"}}]]}}}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.85,
+          "width": 302.67,
+          "x": 977.58,
+          "y": 155.85,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"82a8633037cd3f42ae9b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.5755373564022,\"y\":324.57053414204654,\"z\":5000,\"width\":302.67490287055927,\"height\":75.9907202951617,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 75.99,
+          "width": 302.67,
+          "x": 977.58,
+          "y": 324.57,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"8c62a1ce5dae3e3380ed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":7000,\"width\":418.9750860846668,\"height\":147.9548983863345,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"This data is looking at assessments that have started within the data periods selected using the start date of the assessment\",\"textStyle\":{\"fontSize\":\"11pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"The assessment dashboard looks at assessments completed within a period by completed date, so the numbers won't match.\",\"textStyle\":{\"fontSize\":\"11pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 147.95,
+          "width": 418.98,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"97c86dc61c82eb9e5382\",\"layouts\":[{\"id\":0,\"position\":{\"x\":753.6020525285261,\"y\":17.975828775909797,\"z\":3000,\"width\":201.88238471406387,\"height\":315.2683816082641,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Assessment Start Date Filter\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Assessment Start Date Filter Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Assessment Start Date Filter\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Assessment Start Date Filter Month\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"DIM_ASSESSMENTS.Assessment Start Date Filter.Variation.Date Hierarchy.Month\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2023L\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"2022L\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"2024L\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2022L\"}}],[{\"Literal\":{\"Value\":\"2023L\"}}],[{\"Literal\":{\"Value\":\"2024L\"}}],[{\"Literal\":{\"Value\":\"2021L\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Assessment Start Date'\"}}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2022L\"}}}}},\"displayName\":\"2022\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2023L\"}}}}},\"displayName\":\"2023\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2024L\"}}}}},\"displayName\":\"2024\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_02b53741-9352-453d-99b2-d6a0bd0e035b\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"2021L\"}}}}},\"displayName\":\"2021\"}]}}",
+          "filters": "[]",
+          "height": 315.27,
+          "width": 201.88,
+          "x": 753.60,
+          "y": 17.98,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"aae55d23c59144d7cfa5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.608534197556,\"y\":0,\"z\":1000,\"width\":302.8235770710958,\"height\":82.96536358112215,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Locality Completed By'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 82.97,
+          "width": 302.82,
+          "x": 977.61,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c7c2032d55b45f2945c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":982.7274505967521,\"y\":68.26285043463677,\"z\":8000,\"width\":297.52298963020934,\"height\":87.58252508594907,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Creator Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Creator Locality\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Creator Locality\",\"NativeReferenceName\":\"Assessment Creator Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 87.58,
+          "width": 297.52,
+          "x": 982.73,
+          "y": 68.26,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"e8b5d6f4b080e42e18bf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.5755373564022,\"y\":247.29183553679738,\"z\":4000,\"width\":302.67490287055927,\"height\":77.27869860524918,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 77.28,
+          "width": 302.67,
+          "x": 977.58,
+          "y": 247.29,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f6cfb07c39f963a4cb50\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":428.89677725913293,\"z\":2000,\"width\":1280.2504402269615,\"height\":233.12407412583502,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"Sum(DIM_PERSON.Current Age)\"},{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"},{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\"},{\"queryRef\":\"DIM_ASSESSMENTS.Start date\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Creator\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Creator Team\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Creator Locality\"},{\"queryRef\":\"DIM_ASSESSMENTS.Lead Assessor\"},{\"queryRef\":\"DIM_ASSESSMENTS.Lead Assessor Dept\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Completed Date\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Worker completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"},{\"queryRef\":\"DIM_ASSESSMENTS.Outcome\"},{\"queryRef\":\"Sum(DIM_ASSESSMENTS.Days Assessment Open)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\",\"NativeReferenceName\":\"Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Worker completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Worker completed by\",\"NativeReferenceName\":\"Assessment Worker completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\",\"NativeReferenceName\":\"FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Start date\"},\"Name\":\"DIM_ASSESSMENTS.Start date\",\"NativeReferenceName\":\"Start date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\",\"NativeReferenceName\":\"Form Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Completed Date\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"NativeReferenceName\":\"Assessment Completed Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Outcome\"},\"Name\":\"DIM_ASSESSMENTS.Outcome\",\"NativeReferenceName\":\"Outcome\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Days Assessment Open\"}},\"Function\":0},\"Name\":\"Sum(DIM_ASSESSMENTS.Days Assessment Open)\",\"NativeReferenceName\":\"Days Assessment Open\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"NativeReferenceName\":\"Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Lead Assessor\"},\"Name\":\"DIM_ASSESSMENTS.Lead Assessor\",\"NativeReferenceName\":\"Lead Assessor\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Lead Assessor Dept\"},\"Name\":\"DIM_ASSESSMENTS.Lead Assessor Dept\",\"NativeReferenceName\":\"Lead Assessor Dept\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Creator\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Creator\",\"NativeReferenceName\":\"Assessment Creator\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Creator Team\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Creator Team\",\"NativeReferenceName\":\"Assessment Creator Team\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Creator Locality\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Creator Locality\",\"NativeReferenceName\":\"Assessment Creator Locality\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Current Age\"}},\"Function\":0},\"Name\":\"Sum(DIM_PERSON.Current Age)\",\"NativeReferenceName\":\"Current Age\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter0d10b4c0945094889016\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":true}]",
+          "height": 233.12,
+          "width": 1280.25,
+          "x": 0.00,
+          "y": 428.90,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"350L\"}}}}}]}}",
+      "displayName": "Assessments Completed",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterb0cc00832c3ae3dd6f2e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment Completed Date\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"}},\"Right\":{\"DateSpan\":{\"Expression\":{\"Literal\":{\"Value\":\"datetime'2022-04-01T00:00:00'\"}},\"TimeUnit\":5}}}}}]},\"type\":\"Advanced\",\"howCreated\":1},{\"name\":\"Filterfb6c4eea2a5dbda8d8a0\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":1}]",
+      "height": 720.00,
+      "name": "ReportSectiond49a5952e69605481577",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"067e7339e2eaa1082538\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.608534197556,\"y\":283.46499223550063,\"z\":4000,\"width\":302.8235770710958,\"height\":76.0515832826953,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.05,
+          "width": 302.82,
+          "x": 977.61,
+          "y": 283.46,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"0cd664c6468c8841bcd8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":383.3647887686097,\"z\":2000,\"width\":250.66159265639865,\"height\":337.0239901262503,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}],\"Rows\":[{\"queryRef\":\"DIM_DATE (Assessments).MonthYR\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_DATE (Assessments)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE (Assessments).MonthYR\",\"NativeReferenceName\":\"MonthYR\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{}}]}}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter0d10b4c0945094889016\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":true}]",
+          "height": 337.02,
+          "width": 250.66,
+          "x": 0.00,
+          "y": 383.36,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"240bd2cf33bb36732651\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.608534197556,\"y\":95.41016811829047,\"z\":0,\"width\":302.8235770710958,\"height\":80.19985146175141,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Form Status\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Assessment Rejection'\"}}],[{\"Literal\":{\"Value\":\"'Cancelled'\"}}],[{\"Literal\":{\"Value\":\"'Draft'\"}}],[{\"Literal\":{\"Value\":\"'Assessment Approved'\"}}]]}}}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.20,
+          "width": 302.82,
+          "x": 977.61,
+          "y": 95.41,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"24b30c11a8bff4d79c5d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":286.47039160731276,\"y\":155.87359543339076,\"z\":8000,\"width\":659.3031806844772,\"height\":176.9375948162814,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"NativeReferenceName\":\"Assessment Completed Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2024-12-15T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Completed Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2024-12-16T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 176.94,
+          "width": 659.30,
+          "x": 286.47,
+          "y": 155.87,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"3d08742f6c45035e7f82\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":6000,\"width\":418.9750860846668,\"height\":147.9548983863345,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"This data is looking at assessments that have started within the data periods selected using the start date of the assessment\",\"textStyle\":{\"fontSize\":\"11pt\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"The assessment dashboard looks at assessments completed within a period by completed date, so the numbers won't match.\",\"textStyle\":{\"fontSize\":\"11pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 147.95,
+          "width": 418.98,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"5a67c79d76187e284085\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.608534197556,\"y\":0,\"z\":1000,\"width\":302.8235770710958,\"height\":82.96536358112215,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LOOKUP_TEAM_LOCALITY (Assessments)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Locality\"},\"Name\":\"LOOKUP_TEAM_LOCALITY (Assessments).Locality\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 82.97,
+          "width": 302.82,
+          "x": 977.61,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"77b3a08fb2cc70c0e64e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":156.2514347444467,\"z\":5000,\"width\":199.11687259469315,\"height\":176.99277563972723,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of Assessments Completed'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 176.99,
+          "width": 199.12,
+          "x": 0.00,
+          "y": 156.25,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"873ca2ff0412e6039b76\",\"layouts\":[{\"id\":0,\"position\":{\"x\":429,\"y\":0,\"width\":419,\"height\":150,\"z\":7000,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.FACT FORM ID\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FACT FORM ID\"},\"Name\":\"DIM_ASSESSMENTS.FACT FORM ID\",\"NativeReferenceName\":\"FACT FORM ID\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 150.00,
+          "width": 419.00,
+          "x": 429.00,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"ad1ec20646a384d741cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":977.608534197556,\"y\":206.03065289312,\"z\":3000,\"width\":302.8235770710958,\"height\":77.43433934238067,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 77.43,
+          "width": 302.82,
+          "x": 977.61,
+          "y": 206.03,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"fffe218627891ec64325\",\"layouts\":[{\"id\":0,\"position\":{\"x\":269.61919210100024,\"y\":383.3647887686097,\"z\":9000,\"width\":1011.0719703787508,\"height\":337.0239901262503,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\"},{\"queryRef\":\"DIM_ASSESSMENTS.Start date\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Completed Date\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Description\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment period\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Assessment Worker completed by\"},{\"queryRef\":\"DIM_ASSESSMENTS.Form Status\"},{\"queryRef\":\"DIM_ASSESSMENTS.Outcome\"},{\"queryRef\":\"Sum(DIM_ASSESSMENTS.Days Assessment Open)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d2\",\"Entity\":\"DIM_ASSESSMENTS\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"},\"Name\":\"CountNonNull(DIM_ASSESSMENTS.FACT FORM ID)\",\"NativeReferenceName\":\"Count of FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Description\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Description\",\"NativeReferenceName\":\"Assessment Description\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment period\"},\"Name\":\"DIM_ASSESSMENTS.Assessment period\",\"NativeReferenceName\":\"Assessment period\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Dept. completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Dept. completed by\",\"NativeReferenceName\":\"Assessment Dept. completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Worker completed by\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Worker completed by\",\"NativeReferenceName\":\"Assessment Worker completed by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\",\"NativeReferenceName\":\"FACT FORM ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Start date\"},\"Name\":\"DIM_ASSESSMENTS.Start date\",\"NativeReferenceName\":\"Start date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Form Status\"},\"Name\":\"DIM_ASSESSMENTS.Form Status\",\"NativeReferenceName\":\"Form Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Assessment Completed Date\"},\"Name\":\"DIM_ASSESSMENTS.Assessment Completed Date\",\"NativeReferenceName\":\"Assessment Completed Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Outcome\"},\"Name\":\"DIM_ASSESSMENTS.Outcome\",\"NativeReferenceName\":\"Outcome\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Days Assessment Open\"}},\"Function\":0},\"Name\":\"Sum(DIM_ASSESSMENTS.Days Assessment Open)\",\"NativeReferenceName\":\"Days Assessment Open\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"FACT FORM ID\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter483f47674e7e80323327\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_DATE (Referrals)\"}},\"Property\":\"MonthYR\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]},\"isHiddenInViewMode\":false},{\"name\":\"Filter0d10b4c0945094889016\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_ASSESSMENTS\"}},\"Property\":\"Assessment period\"}},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":true}]",
+          "height": 337.02,
+          "width": 1011.07,
+          "x": 269.62,
+          "y": 383.36,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

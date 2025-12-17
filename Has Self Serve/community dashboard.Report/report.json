@@ -1,0 +1,385 @@
+{
+  "config": "{\"version\":\"5.30\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"version\":\"5.34\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"creationSource\":\"QuickCreate\"}",
+  "filters": "[{\"name\":\"Filterdac91399c8cb3c6dfb58\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CP End Date\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":true}]",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"204L\"}}}}}]}}",
+      "displayName": "Headlines",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"09f6d763fd8a47dcb9e6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":694.9232158988257,\"y\":3.4688346883468832,\"z\":4000,\"width\":320.2890695573622,\"height\":109.8464317976513}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE.Dte\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Dte\"},\"Name\":\"DIM_DATE.Dte\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Dte\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 109.85,
+          "width": 320.29,
+          "x": 694.92,
+          "y": 3.47,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"21da36b6ff5c67e117f1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":353.8211382113821,\"y\":0,\"z\":1000,\"width\":164.1915085817525,\"height\":72.84552845528455}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2}}}]},\"columnProperties\":{\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\":{\"displayName\":\"Number of Clients\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 72.85,
+          "width": 164.19,
+          "x": 353.82,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"22bc3c60182d005cf765\",\"layouts\":[{\"id\":0,\"position\":{\"x\":751.1111111111111,\"y\":433.3333333333333,\"z\":6000,\"width\":528.8888888888888,\"height\":286.66666666666663}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true},{\"queryRef\":\"Expenditure to cost code locality lookup.ExpenditureCostCentre\"},{\"queryRef\":\"DIM_CARE_PACKAGE.OrganisationName\"}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"OrganisationName\"},\"Name\":\"DIM_CARE_PACKAGE.OrganisationName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"ExpenditureCostCentre\"},\"Name\":\"Expenditure to cost code locality lookup.ExpenditureCostCentre\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Res nursing by locality'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false},{\"name\":\"Filter49d4964d33de726e2701\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]}}]",
+          "height": 286.67,
+          "width": 528.89,
+          "x": 751.11,
+          "y": 433.33,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"2bea8a5568be945d869e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":228.9430894308943,\"z\":3000,\"width\":201.19241192411923,\"height\":112.15898825654924}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.16,
+          "width": 201.19,
+          "x": 0.00,
+          "y": 228.94,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"8be295339f4bb006adfc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":152.60020554984584,\"z\":2000,\"width\":201.27440904419322,\"height\":76.30010277492292}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_PERSON.Age Group 2\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age Group 2\"},\"Name\":\"DIM_PERSON.Age Group 2\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 76.30,
+          "width": 201.27,
+          "x": 0.00,
+          "y": 152.60,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b65a0eda0407379adb25\",\"layouts\":[{\"id\":0,\"position\":{\"x\":518.0126467931345,\"y\":0,\"z\":8001,\"width\":164.1915085817525,\"height\":72.84552845528455}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.CPLI ID\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"DIM_CARE_PACKAGE.CPLI ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"columnProperties\":{\"DIM_CARE_PACKAGE.CPLI ID\":{\"displayName\":\"Number of Packages\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 72.85,
+          "width": 164.19,
+          "x": 518.01,
+          "y": 0.00,
+          "z": 8001.00
+        },
+        {
+          "config": "{\"name\":\"d0caa2a70e72ac2a5f29\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":299.9383350462487,\"height\":99.97944501541625}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.ServiceCat\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"},\"Name\":\"DIM_CARE_PACKAGE.ServiceCat\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 99.98,
+          "width": 299.94,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"dad54d64de70a62d59cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225.40415704387993,\"y\":433.0715935334873,\"z\":5000,\"width\":526.189376443418,\"height\":286.74364896073905}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true},{\"queryRef\":\"DIM_CARE_PACKAGE.OrganisationName\"}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"OrganisationName\"},\"Name\":\"DIM_CARE_PACKAGE.OrganisationName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"end\":{\"expr\":{\"Literal\":{\"Value\":\"0.4D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Community services by Locality'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false},{\"name\":\"Filtere76e15915d7632fd41f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 286.74,
+          "width": 526.19,
+          "x": 225.40,
+          "y": 433.07,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"f12e367633f413d86072\",\"layouts\":[{\"id\":0,\"position\":{\"x\":309.8825654923216,\"y\":113.3152664859982,\"z\":8000,\"width\":705.3297199638663,\"height\":286.7570009033424}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Divide(CountNonNull(DIM_CARE_PACKAGE.CPLI ID), ScopedEval(CountNonNull(DIM_CARE_PACKAGE.CPLI ID), []))\"}],\"Series\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\"}],\"Category\":[{\"queryRef\":\"DIM_DATE.MonthYR\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"Divide(CountNonNull(DIM_CARE_PACKAGE.CPLI ID), ScopedEval(CountNonNull(DIM_CARE_PACKAGE.CPLI ID), []))\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"MonthYR\"},\"Name\":\"DIM_DATE.MonthYR\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"end\":{\"expr\":{\"Literal\":{\"Value\":\"0.4D\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Community services by Locality'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere76e15915d7632fd41f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 286.76,
+          "width": 705.33,
+          "x": 309.88,
+          "y": 113.32,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"ffeede36d61b72fa49ac\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1015.2122854561878,\"y\":3.4688346883468832,\"z\":7000,\"width\":264.7877145438121,\"height\":146.84733514001806}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE.Financial Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Financial Year\"},\"Name\":\"DIM_DATE.Financial Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 146.85,
+          "width": 264.79,
+          "x": 1015.21,
+          "y": 3.47,
+          "z": 7000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"388L\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection2c8aebd8d8d4f205ef3b",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"ac6377dd15cf311c2503\",\"layouts\":[{\"id\":0,\"position\":{\"x\":87.36728060671723,\"y\":160.8667388949079,\"z\":0,\"width\":1192.6327193932827,\"height\":478.4398699891658}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"Sum(FACT_SERVICES.DailyCost)\"},{\"queryRef\":\"MEASURES SERVICES.Current Service Cost (Services)\"},{\"queryRef\":\"Sum(FACT_SERVICES.No_Of_Hours)\"},{\"queryRef\":\"Sum(DIM_CARE_PACKAGE.TotCurrHours)\"},{\"queryRef\":\"MEASURES SERVICES.Total Hours (Service)\"},{\"queryRef\":\"MEASURES SERVICES.Cost over time (Services)\"},{\"queryRef\":\"Sum(DIM_CARE_PACKAGE.Length of Service (Weeks))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FACT_SERVICES\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"MEASURES SERVICES\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"DailyCost\"},\"Name\":\"Sum(FACT_SERVICES.DailyCost)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Current Service Cost (Services)\"},\"Name\":\"MEASURES SERVICES.Current Service Cost (Services)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"No_Of_Hours\"},\"Name\":\"Sum(FACT_SERVICES.No_Of_Hours)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TotCurrHours\"},\"Name\":\"Sum(DIM_CARE_PACKAGE.TotCurrHours)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Hours (Service)\"},\"Name\":\"MEASURES SERVICES.Total Hours (Service)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Cost over time (Services)\"},\"Name\":\"MEASURES SERVICES.Cost over time (Services)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service (Weeks)\"},\"Name\":\"Sum(DIM_CARE_PACKAGE.Length of Service (Weeks))\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_PERSON\"}},\"Property\":\"LLA ID\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"LLA ID\"}},\"Right\":{\"Literal\":{\"Value\":\"900590L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 478.44,
+          "width": 1192.63,
+          "x": 87.37,
+          "y": 160.87,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"204L\"}}}}}]}}",
+      "displayName": "Duplicate of PSR",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter3663bfa2fe4ae7fbf8e8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "ReportSection73e5be9029882b7cb757",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1bcfdbef304a1a29ddd7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.1626016260162,\"y\":396.60343270099366,\"z\":7000,\"width\":538.8256549232159,\"height\":323.75790424570914}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"Category\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true}],\"Series\":[{\"queryRef\":\"DIM_PERSON.Primary Support Reason\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Primary Support Reason\"},\"Name\":\"DIM_PERSON.Primary Support Reason\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Community services by PSR'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere76e15915d7632fd41f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 323.76,
+          "width": 538.83,
+          "x": 260.16,
+          "y": 396.60,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"26ce10a92ba32ef0cd96\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1022.1499548328817,\"y\":126.03432700993676,\"z\":9000,\"width\":257.8500451671183,\"height\":76.31436314363144}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.31,
+          "width": 257.85,
+          "x": 1022.15,
+          "y": 126.03,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"2db20138e5b0b9a5c694\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":299.9383350462487,\"height\":99.97944501541625}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.ServiceCat\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"},\"Name\":\"DIM_CARE_PACKAGE.ServiceCat\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 99.98,
+          "width": 299.94,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"40f2b05246b4167d4b90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":324.9141824751581,\"y\":109.8464317976513,\"z\":5000,\"width\":526.1065943992774,\"height\":285.6007226738934}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_PERSON.Age Group 2\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"Series\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Age Group 2\"},\"Name\":\"DIM_PERSON.Age Group 2\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"end\":{\"expr\":{\"Literal\":{\"Value\":\"0.4D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Community services by Locality'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere76e15915d7632fd41f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 285.60,
+          "width": 526.11,
+          "x": 324.91,
+          "y": 109.85,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"5be08a371899acbb94cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":152.60020554984584,\"z\":2000,\"width\":201.27440904419322,\"height\":76.30010277492292}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_PERSON.Age Group 2\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age Group 2\"},\"Name\":\"DIM_PERSON.Age Group 2\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 76.30,
+          "width": 201.27,
+          "x": 0.00,
+          "y": 152.60,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"600074766b25d0fdff5b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":751.5808491418247,\"y\":0,\"z\":4000,\"width\":320.2890695573622,\"height\":150.31616982836493}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE.Dte\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Dte\"},\"Name\":\"DIM_DATE.Dte\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Dte\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 150.32,
+          "width": 320.29,
+          "x": 751.58,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"6b861ddb5915a7e8a985\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":301.7886178861788,\"z\":3000,\"width\":201.19241192411923,\"height\":76.31436314363144}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.31,
+          "width": 201.19,
+          "x": 0.00,
+          "y": 301.79,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"6e11dac64cec37c06641\",\"layouts\":[{\"id\":0,\"position\":{\"x\":859.1147244805782,\"y\":468.29268292682923,\"z\":11000,\"width\":379.25925925925924,\"height\":211.59891598915988}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 211.60,
+          "width": 379.26,
+          "x": 859.11,
+          "y": 468.29,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"8db2604891d96770ba78\",\"layouts\":[{\"id\":0,\"position\":{\"x\":859.1147244805782,\"y\":218.53658536585365,\"z\":8000,\"width\":379.25925925925924,\"height\":211.59891598915988}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 211.60,
+          "width": 379.26,
+          "x": 859.11,
+          "y": 218.54,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"9b4b28110f36e4372cd4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1090.175077239959,\"y\":16.4778578784758,\"z\":6000,\"width\":189.8249227600412,\"height\":185.87023686920702}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE.Financial Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Financial Year\"},\"Name\":\"DIM_DATE.Financial Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Financial Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2022/23'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 185.87,
+          "width": 189.82,
+          "x": 1090.18,
+          "y": 16.48,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"ac0f00970c27af5fb262\",\"layouts\":[{\"id\":0,\"position\":{\"x\":324.9331963001028,\"y\":5.26207605344296,\"z\":1000,\"width\":164.4398766700925,\"height\":73.66906474820144}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 73.67,
+          "width": 164.44,
+          "x": 324.93,
+          "y": 5.26,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"b394b7e64bf72e5cf4ad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":508.7624209575429,\"y\":0,\"z\":10000,\"width\":164.1915085817525,\"height\":74.00180668473351}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.CPLI ID\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"DIM_CARE_PACKAGE.CPLI ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 74.00,
+          "width": 164.19,
+          "x": 508.76,
+          "y": 0.00,
+          "z": 10000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"204L\"}}}}}]}}",
+      "displayName": "PSR",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection8af18e191666b46b76ad",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3c9ee097776bd4fceff4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":301.7886178861788,\"z\":3000,\"width\":201.19241192411923,\"height\":230.09936766034326}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 230.10,
+          "width": 201.19,
+          "x": 0.00,
+          "y": 301.79,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"45adebe05b6f7654b5c1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":859.1147244805782,\"y\":218.53658536585365,\"z\":7002,\"width\":379.25925925925924,\"height\":211.59891598915988}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 211.60,
+          "width": 379.26,
+          "x": 859.11,
+          "y": 218.54,
+          "z": 7002.00
+        },
+        {
+          "config": "{\"name\":\"47cad0cd468a509f13fd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":324.9331963001028,\"y\":5.26207605344296,\"z\":1000,\"width\":164.4398766700925,\"height\":73.66906474820144}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 73.67,
+          "width": 164.44,
+          "x": 324.93,
+          "y": 5.26,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"5051997accf9fa77d18e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":859.1147244805782,\"y\":468.29268292682923,\"z\":7007,\"width\":379.25925925925924,\"height\":211.59891598915988}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 211.60,
+          "width": 379.26,
+          "x": 859.11,
+          "y": 468.29,
+          "z": 7007.00
+        },
+        {
+          "config": "{\"name\":\"519e9471a59617193b10\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":152.60020554984584,\"z\":2000,\"width\":201.27440904419322,\"height\":76.30010277492292}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_PERSON.Age Group 2\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age Group 2\"},\"Name\":\"DIM_PERSON.Age Group 2\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 76.30,
+          "width": 201.27,
+          "x": 0.00,
+          "y": 152.60,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"604177d74ac8dcd22366\",\"layouts\":[{\"id\":0,\"position\":{\"x\":751.5808491418247,\"y\":0,\"z\":4000,\"width\":320.2890695573622,\"height\":150.31616982836493}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE.Dte\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Dte\"},\"Name\":\"DIM_DATE.Dte\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Dte\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 150.32,
+          "width": 320.29,
+          "x": 751.58,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"641cda1ae60fea24007b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":299.9383350462487,\"height\":99.97944501541625}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.ServiceCat\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"},\"Name\":\"DIM_CARE_PACKAGE.ServiceCat\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 99.98,
+          "width": 299.94,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"734ca9abd5d1ffce757a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.1626016260162,\"y\":396.60343270099366,\"z\":7000,\"width\":538.8256549232159,\"height\":323.75790424570914}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"Category\":[{\"queryRef\":\"Expenditure to cost code locality lookup.Locality\",\"active\":true}],\"Series\":[{\"queryRef\":\"DIM_PERSON.Primary Support Reason\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Expenditure to cost code locality lookup\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Locality\"},\"Name\":\"Expenditure to cost code locality lookup.Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Primary Support Reason\"},\"Name\":\"DIM_PERSON.Primary Support Reason\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Community services by PSR'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere76e15915d7632fd41f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 323.76,
+          "width": 538.83,
+          "x": 260.16,
+          "y": 396.60,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"741605970d6ee17bac74\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1090.175077239959,\"y\":16.4778578784758,\"z\":6000,\"width\":189.8249227600412,\"height\":185.87023686920702}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_DATE.Financial Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Financial Year\"},\"Name\":\"DIM_DATE.Financial Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_DATE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Financial Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'2022/23'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 185.87,
+          "width": 189.82,
+          "x": 1090.18,
+          "y": 16.48,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"8921393a1c6d3333b899\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1022.1499548328817,\"y\":126.03432700993676,\"z\":7003,\"width\":257.8500451671183,\"height\":76.31436314363144}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 76.31,
+          "width": 257.85,
+          "x": 1022.15,
+          "y": 126.03,
+          "z": 7003.00
+        },
+        {
+          "config": "{\"name\":\"aebd08987dfb69347a58\",\"layouts\":[{\"id\":0,\"position\":{\"x\":508.7624209575429,\"y\":0,\"z\":7006,\"width\":164.1915085817525,\"height\":74.00180668473351}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_CARE_PACKAGE.CPLI ID\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"DIM_CARE_PACKAGE.CPLI ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 74.00,
+          "width": 164.19,
+          "x": 508.76,
+          "y": 0.00,
+          "z": 7006.00
+        },
+        {
+          "config": "{\"name\":\"cd1cf0429f393c856a24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":324.9141824751581,\"y\":109.8464317976513,\"z\":5000,\"width\":526.1065943992774,\"height\":285.6007226738934}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_PERSON.Age Group 2\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"}],\"Series\":[{\"queryRef\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"DIM_PERSON\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Age Group 2\"},\"Name\":\"DIM_PERSON.Age Group 2\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.CPLI ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Length of Service Bins (Weeks)\"},\"Name\":\"DIM_CARE_PACKAGE.Length of Service Bins (Weeks)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"end\":{\"expr\":{\"Literal\":{\"Value\":\"0.4D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Community services by Locality'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filtere76e15915d7632fd41f8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"ServiceCat\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Local Authority Care -'\"}}],[{\"Literal\":{\"Value\":\"'Nursing Care -'\"}}],[{\"Literal\":{\"Value\":\"'Residential Care -'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},{\"expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_CARE_PACKAGE\"}},\"Property\":\"CPLI ID\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 285.60,
+          "width": 526.11,
+          "x": 324.91,
+          "y": 109.85,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

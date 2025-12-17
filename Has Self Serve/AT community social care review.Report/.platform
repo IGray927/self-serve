@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "AT community social care review"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f9d78dd6-2f4c-a4ec-488e-1206d8c93c3e"
+  }
+}

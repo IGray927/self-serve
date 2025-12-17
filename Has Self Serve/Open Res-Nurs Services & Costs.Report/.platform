@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Open Res-Nurs Services & Costs"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ea54df68-80d4-a06f-4182-9a476b045caf"
+  }
+}

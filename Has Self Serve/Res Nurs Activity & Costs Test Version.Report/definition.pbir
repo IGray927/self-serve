@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
+  "version": "4.0",
+  "datasetReference": {
+    "byConnection": {
+      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/HAS - Assessments, Referrals and Services\";initial catalog=\"Data Model HAS v1.0\";integrated security=ClaimsToken;semanticmodelid=31ebe152-f497-49e0-a049-dbe1dea0f787"
+    }
+  }
+}

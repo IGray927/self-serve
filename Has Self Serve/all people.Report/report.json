@@ -1,0 +1,100 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"type\":2,\"version\":\"5.34\"}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"creationSource\":\"QuickCreate\"}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection6828b91a4f2e49d653db",
+      "config": "{}",
+      "name": "Pod"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Special Factors",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"f054dbbfed7006a8d81a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_SPECIAL_FACTORS\"}},\"Property\":\"Special Factor End Date\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_SPECIAL_FACTORS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Or\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Special Factor End Date\"}},\"Right\":{\"DateSpan\":{\"Expression\":{\"Literal\":{\"Value\":\"datetime'2024-02-29T00:00:00'\"}},\"TimeUnit\":5}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Special Factor End Date\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "205f4ed05d8b680b88e5",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"ce50ea7107cb17dc5e0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":159.89249032092917,\"z\":0,\"width\":1205.746648321761,\"height\":526.8588615492912}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"DIM_PERSON.Age Group\"},{\"queryRef\":\"DIM_PERSON.Postcode\"},{\"queryRef\":\"DIM_PERSON.Name\"},{\"queryRef\":\"DIM_SPECIAL_FACTORS.Special Factor Start Date\"},{\"queryRef\":\"DIM_SPECIAL_FACTORS.Special Factor End Date\"},{\"queryRef\":\"DIM_SPECIAL_FACTORS.Special Factor\"},{\"queryRef\":\"DIM_PERSON.Most Recent CW Department\"},{\"queryRef\":\"DIM_PERSON.Most Recent CW Locality\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DIM_SPECIAL_FACTORS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Postcode\"},\"Name\":\"DIM_PERSON.Postcode\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Name\"},\"Name\":\"DIM_PERSON.Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Most Recent CW Locality\"},\"Name\":\"DIM_PERSON.Most Recent CW Locality\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age Group\"},\"Name\":\"DIM_PERSON.Age Group\",\"NativeReferenceName\":\"Age Group\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Special Factor\"},\"Name\":\"DIM_SPECIAL_FACTORS.Special Factor\",\"NativeReferenceName\":\"Special Factor\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Special Factor Start Date\"},\"Name\":\"DIM_SPECIAL_FACTORS.Special Factor Start Date\",\"NativeReferenceName\":\"Special Factor Start Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Special Factor End Date\"},\"Name\":\"DIM_SPECIAL_FACTORS.Special Factor End Date\",\"NativeReferenceName\":\"Special Factor End Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Most Recent CW Department\"},\"Name\":\"DIM_PERSON.Most Recent CW Department\",\"NativeReferenceName\":\"Most Recent CW Department\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"4b80e51588bb0d0cb482\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_SPECIAL_FACTORS\"}},\"Property\":\"Special Factor\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_SPECIAL_FACTORS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Special Factor\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Dynamic Support Register'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 526.86,
+          "width": 1205.75,
+          "x": 0.00,
+          "y": 159.89,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8f4e9b24f22858bc6ecb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.5119924289475,\"y\":142.94147221482862,\"z\":1000,\"width\":409.44252210688194,\"height\":528.1566261497057}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"DIM_PERSON.DIM_PERSON_ID\"},{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"Sum(DIM_PERSON.Current Age)\"},{\"queryRef\":\"DIM_PERSON.Age Group\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"DIM_PERSON_ID\"},\"Name\":\"DIM_PERSON.DIM_PERSON_ID\",\"NativeReferenceName\":\"DIM_PERSON_ID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\",\"NativeReferenceName\":\"LLA ID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age Group\"},\"Name\":\"DIM_PERSON.Age Group\",\"NativeReferenceName\":\"Age Group\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Current Age\"}},\"Function\":0},\"Name\":\"Sum(DIM_PERSON.Current Age)\",\"NativeReferenceName\":\"Current Age\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"name\":\"3b1f39ac1ea8ce051f45\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DIM_PERSON\"}},\"Property\":\"Date of Death\"}},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 528.16,
+          "width": 409.44,
+          "x": 736.51,
+          "y": 142.94,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"b6ba5c0833fed86a2083\",\"layouts\":[{\"id\":0,\"position\":{\"x\":183.42679127725856,\"y\":143.55140186915887,\"z\":0,\"width\":518.380062305296,\"height\":528.3489096573209}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"queryRef\":\"DIM_PERSON.Postcode\"},{\"queryRef\":\"DIM_PERSON.Name\"},{\"queryRef\":\"DIM_PERSON.Most Recent CW Locality\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_PERSON\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Postcode\"},\"Name\":\"DIM_PERSON.Postcode\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"},\"Name\":\"CountNonNull(DIM_PERSON.LLA ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Name\"},\"Name\":\"DIM_PERSON.Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Most Recent CW Locality\"},\"Name\":\"DIM_PERSON.Most Recent CW Locality\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 528.35,
+          "width": 518.38,
+          "x": 183.43,
+          "y": 143.55,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection6828b91a4f2e49d653db",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6b112605c5d170f5ba96\",\"layouts\":[{\"id\":0,\"position\":{\"x\":41.16773874319644,\"y\":74.1019297377536,\"z\":0,\"width\":692.2513607125186,\"height\":514.2800593765463}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"DIM_CARE_PACKAGE.ServiceCat\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DIM_CARE_PACKAGE\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2},\"Name\":\"CountNonNull(DIM_CARE_PACKAGE.LLA ID)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ServiceCat\"},\"Name\":\"DIM_CARE_PACKAGE.ServiceCat\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"LLA ID\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 514.28,
+          "width": 692.25,
+          "x": 41.17,
+          "y": 74.10,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

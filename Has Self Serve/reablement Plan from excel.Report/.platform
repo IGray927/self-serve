@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "reablement Plan from excel"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "397fdfd6-8959-ada3-4c32-db61ab94f4e2"
+  }
+}
